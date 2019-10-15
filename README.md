@@ -1,6 +1,6 @@
 # Software Engineering Labs 2019/2020
 
-# Author: WRITE YOUR FULL NAME HERE
+# Author: Bernardo Kopjar
 
 # Setup
 
