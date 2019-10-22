@@ -1,6 +1,6 @@
 num = int(input("Please choose a number to divide: "))
 
-listRange = list(range(1,num+1))
+listRange = list(range(1, num+1))
 
 divisorList = []
 
