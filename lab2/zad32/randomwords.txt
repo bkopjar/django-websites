@@ -1,0 +1,6 @@
+Head
+Human
+Lion
+Python
+Snake
+Tennis
