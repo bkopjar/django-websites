@@ -1,16 +1,19 @@
-<h1>Neki naslov aplikacije!</h1>
+<h1> Gadget Application </h1>
+<div>
 {% if image_list %}
-    <div style="width: 100%">
     {% for image in image_list %}
-    <div style="width: 30%; float: left; padding:10">
-        <p>{{ image.name }} <small>{{ image.pub_date }}</small></p>
-        <a href="{% url 'polls:detail' image.id %}">
-        <img src = "{{ image.url }}" style="width: 100%"/>   
-        </a>
-        </div> 
-{% endfor %}
-</div>
+    <div style="width: 30%; float: left;">
+        <p>{{ image.name }}</p><a href="{% url 'polls:detail' image.id %}">
+            <img src="{{ image.url }}" style="width: 100%;"> 
+        </a> 
+        
+        <p>Score: {{ image.votes }}</p>
+    </div>
+
+    {% endfor %}
 {% else %}
-    <h3>Nema učitanih slika</h3>
+    <p>No images!</p>
 {% endif %}
+</div>
+
 

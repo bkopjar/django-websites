@@ -1,4 +1,8 @@
 from django.contrib import admin
-from .models import Image
+#importamo admin model iz models
+from .models import Image 
+
+
+
 # Register your models here.
 admin.site.register(Image)

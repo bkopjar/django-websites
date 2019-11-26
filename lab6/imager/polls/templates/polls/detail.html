@@ -1,16 +1,21 @@
 <h1>{{ image.name }}</h1>
+<h2>Score: {{ image.votes }}</h2>
+
 <div style="width: 100%;">
-    <div style="width: 60%; float: left;"></div>
-        <img src="{{ image.url }}" style="width: 100%"/>
-    </div>
-    <div style="width: 30%; float: left;">
-        <p>Score: {{ image.votes }}</p>
-        <form action="{% url 'polls:upvote' image.id %}" method="post">
-            {% csrf_token %}
-            <input type="submit" value="Vote UP">
-     </form>
-    <form action="{% url 'polls:upvote' image.id %" method="post">
-        <input type="submit" value="Vote DOWN">
-    </form>
+    <div style="width: 45%; float: left;"><img src="{{ image.url }}" style="width:100%;"></div>
+        <div style="width: 45%; float: left;">
+
+            <form action="{% url 'polls:upvote' image.id %}" method="post">
+                {% csrf_token%}
+                <input type="submit" value="Vote up">
+            </form>
+            
+
+            <form action="{% url 'polls:downvote' image.id %}" method="post">
+                    {% csrf_token%}
+                <input type="submit" value="Vote down">
+            </form>
+            
     </div>
 </div>
+
