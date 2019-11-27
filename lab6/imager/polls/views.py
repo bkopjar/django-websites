@@ -19,10 +19,16 @@ class DetailView(generic.DetailView):
     template_name = 'polls/detail.html'
 
 def upvote(request, image_id):
-    return cast_vote(request, image_id, +1)
+    image = get_object_or_404(Image, pk=image_id)
+    image.votes += 1
+    image.save()
+    return HttpResponseRedirect(reverse("polls:index"))
 
 def downvote(request, image_id):
-    return cast_vote(request, image_id, -1)
+    image = get_object_or_404(Image, pk=image_id)
+    image.votes -= 1
+    image.save()
+    return HttpResponseRedirect(reverse("polls:index"))
     
 
 def cast_vote(request, image_id, score):
