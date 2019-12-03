@@ -5,3 +5,4 @@ sudo pip3 install django
 sudo pip3 install --upgrade django //if old version
 sudo apt install python3-django
 django-admin --version
+git reset --hard
