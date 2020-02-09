@@ -19,6 +19,9 @@
                     <li class="nav-item">
                         <a href="{% url 'post_draft_list' %}" class="top-menu"><span class="glyphicon glyphicon-edit"></span></a>
                      </li>
+                     <li class="nav-item">
+                        <a href="{% url 'signup' %}" class="top-menu">Signup</a>
+                     </li>
                     <li class="nav-item">
                         <p class="top-menu">Hello {{ user.username }} <small>(<a href="{% url 'logout' %}">Log out</a>)</small></p>
                     </li>
